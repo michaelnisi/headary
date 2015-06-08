@@ -1,0 +1,25 @@
+{
+  "name": "headary",
+  "version": "1.0.0",
+  "description": "Process some HTTP status codes and headers",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_TEST=1 tap -b test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/michaelnisi/headary.git"
+  },
+  "keywords": [
+    "HTTP",
+    "status",
+    "codes",
+    "headers"
+  ],
+  "author": "Michael Nisi <michael.nisi@gmail.com> (http://michaelnisi.com/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/michaelnisi/headary/issues"
+  },
+  "homepage": "https://github.com/michaelnisi/headary"
+}
