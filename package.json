@@ -1,10 +1,10 @@
 {
   "name": "headary",
   "version": "1.0.0",
-  "description": "Process some HTTP status codes and headers",
+  "description": "Process basic HTTP status codes and headers",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_TEST=1 tap -b test/*.js"
+    "test": "NODE_TEST=1 tap -b test.js"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/michaelnisi/headary/issues"
   },
-  "homepage": "https://github.com/michaelnisi/headary"
+  "homepage": "https://github.com/michaelnisi/headary",
+  "devDependencies": {
+    "tap": "^1.2.0"
+  }
 }

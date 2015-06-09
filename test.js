@@ -1,4 +1,4 @@
-var headary = require('../')
+var headary = require('./')
 var test = require('tap').test
 
 test('processing of received HTTP headers', function (t) {
