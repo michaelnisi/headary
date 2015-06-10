@@ -1,6 +1,6 @@
 # headary - summarize HTTP headers
 
-**headary** is a trivial [Node](https://nodejs.org) package that provides a normalized summary of basic HTTP status codes and headers. You might use **headary** to handle redirected (and unmodified) responses in a unified way throughout your code.
+**headary** is a trivial [Node](https://nodejs.org) package that provides a normalized summary of basic HTTP status codes and headers. You might use **headary** to write control flow for `redirects` and `304s` in a uniform way. This can make sense if you handle responses at multiple locations in your code.
 
 [![Build Status](https://secure.travis-ci.org/michaelnisi/headary.svg)](http://travis-ci.org/michaelnisi/headary)
 
@@ -36,8 +36,8 @@ if (h.ok) {
 
 ### summary (message, ok, permanent, url)
 
-- `message String() | undefined` An error message
-- `ok Boolean() | false` No further actions required
+- `message` [`String()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)` | undefined` An error message
+- `ok` [`Boolean()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)` | false` No further actions required
 - `permanent Boolean() | false` Resource been moved permanently
 - `url String() | undefined` The new location of the resource
 
