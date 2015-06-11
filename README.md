@@ -34,7 +34,7 @@ if (h.ok) {
 
 ## types
 
-### summary (message, ok, permanent, url)
+### summary()
 
 - `message` [`String()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)` | undefined` An error message
 - `ok` [`Boolean()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)` | false` No further actions required

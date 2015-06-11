@@ -1,7 +1,7 @@
 {
   "name": "headary",
-  "version": "1.0.0",
-  "description": "Process basic HTTP status codes and headers",
+  "version": "1.0.1",
+  "description": "Summarize basic HTTP status codes and headers",
   "main": "index.js",
   "scripts": {
     "test": "NODE_TEST=1 tap -b test.js"
