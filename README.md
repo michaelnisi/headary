@@ -34,20 +34,20 @@ if (h.ok) {
 
 ## Types
 
-### summary()
+### Headers
 
-- `message` [`String()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)` | undefined` An error message
-- `ok` [`Boolean()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)` | false` No further actions required
-- `permanent Boolean() | false` Resource been moved permanently
-- `url String() | undefined` The new location of the resource
+- `message` `String | undefined` Optional information.
+- `ok` `Boolean` This flag is `true` if no further actions are required.
+- `permanent` `Boolean` If the resource has been moved permanently, this is `true`.
+- `url` `String` The new location of the resource, if it has been moved.
 
 ## Exports
 
-**headary** exports a single function that returns a `summary()` object.
+**headary** exports a single function that returns a new `Headers` object.
 
 ### headary(res)
 
-- `res` [`http.IncomingMessage()`](https://nodejs.org/api/http.html#http_http_incomingmessage) A HTTP response
+- `res` [`http.IncomingMessage`](https://nodejs.org/api/http.html#http_http_incomingmessage) A HTTP response.
 
 Take a HTTP response, and return a `summary()` object.
 
