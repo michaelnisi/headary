@@ -4,20 +4,20 @@
 
 [![Build Status](https://secure.travis-ci.org/michaelnisi/headary.svg)](http://travis-ci.org/michaelnisi/headary)
 
-## example
+## Example
 
 ```js
-var headary = require('headary')
+const headary = require('headary')
 
 // Get HTTP response `res` from somewhere.
 
-var h = headary(res)
+const h = headary(res)
 if (h.ok) {
   // Move on.
 } else {
   if (h.message) {
     // Quaint or unhandled HTTP status.
-    var er = new Error(h.message)
+    const er = new Error(h.message)
     this.emit('error', er)
   } else if (h.url) {
     // Issue request with new URL.
@@ -32,7 +32,7 @@ if (h.ok) {
 }
 ```
 
-## types
+## Types
 
 ### summary()
 
@@ -41,7 +41,7 @@ if (h.ok) {
 - `permanent Boolean() | false` Resource been moved permanently
 - `url String() | undefined` The new location of the resource
 
-## exports
+## Exports
 
 **headary** exports a single function that returns a `summary()` object.
 
@@ -63,7 +63,7 @@ The considered HTTP status codes:
 - `307 Temporary Redirect`
 - `410 Gone`
 
-## install
+## Install
 
 With [npm](https://npmjs.org/package/headary) do:
 
@@ -71,6 +71,6 @@ With [npm](https://npmjs.org/package/headary) do:
 $ npm install headary
 ```
 
-## license
+## License
 
 [MIT License](https://raw.github.com/michaelnisi/headary/master/LICENSE)

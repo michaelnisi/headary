@@ -1,8 +1,8 @@
-var headary = require('./')
-var test = require('tap').test
+const headary = require('./')
+const test = require('tap').test
 
-test('processing of received HTTP headers', function (t) {
-  var f = headary
+test('processing of received HTTP headers', (t) => {
+  const f = headary
   function d (sc) {
     return {
       message: 'quaint HTTP status: ' + sc + ' from http://abc.de',
@@ -11,7 +11,7 @@ test('processing of received HTTP headers', function (t) {
       url: null
     }
   }
-  var tmp = {
+  const tmp = {
     message: null,
     ok: false,
     permanent: false,
@@ -25,7 +25,7 @@ test('processing of received HTTP headers', function (t) {
       url: undefined
     }
   }
-  var wanted = [
+  const wanted = [
     d(100),
     { message: null,
       ok: true,
@@ -63,7 +63,7 @@ test('processing of received HTTP headers', function (t) {
     },
     d(500)
   ]
-  var found = [
+  const found = [
     f({ statusCode: 100, headers: {}, url: 'http://abc.de' }),
     f({ statusCode: 200, headers: {} }),
     f({ statusCode: 300, headers: { 'location': 'http://fgh.ijk' } }),
