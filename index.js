@@ -2,12 +2,6 @@
 
 module.exports = headary
 
-// Normalized summary of some HTTP status codes and headers.
-//
-// - message String | undefined An error message
-// - ok Boolean | false `true` if no further actions are required
-// - permanent Boolean | false `true` if resource has been permanently moved
-// - url String | undefined The new location of the resource
 function Headers (message, ok, permanent, url) {
   this.message = message
   this.ok = ok

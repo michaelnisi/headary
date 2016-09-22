@@ -36,10 +36,10 @@ if (h.ok) {
 
 ### Headers
 
-- `message` `String | undefined` Optional information.
+- `message` `String` Optional information.
 - `ok` `Boolean` This flag is `true` if no further actions are required.
 - `permanent` `Boolean` If the resource has been moved permanently, this is `true`.
-- `url` `String` The new location of the resource, if it has been moved.
+- `url` `String` If the resource has been moved, this is its new location.
 
 ## Exports
 
@@ -47,21 +47,21 @@ if (h.ok) {
 
 ### headary(res)
 
-- `res` [`http.IncomingMessage`](https://nodejs.org/api/http.html#http_http_incomingmessage) A HTTP response.
+- `res` [`http.IncomingMessage`](https://nodejs.org/api/http.html#http_class_http_incomingmessage) A HTTP response.
 
-Take a HTTP response, and return a `summary()` object.
+Creates `Headers` from a HTTP response.
 
 The considered HTTP status codes:
 
-- `200 OK`
-- `300 Multiple Choices`
-- `301 Moved Permanently`
-- `302 Found`
-- `303 See Other`
-- `304 Not Modified`
-- `305 Use Proxy`
-- `307 Temporary Redirect`
-- `410 Gone`
+- `200` OK
+- `300` Multiple Choices
+- `301` Moved Permanently
+- `302` Found
+- `303` See Other
+- `304` Not Modified
+- `305` Use Proxy
+- `307` Temporary Redirect
+- `410` Gone
 
 ## Install
 
