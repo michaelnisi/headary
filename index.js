@@ -39,6 +39,12 @@ const funs = {
   }
 }
 
+// TODO: File Node issue
+//
+// Contrary to the Node documentation,
+// https://nodejs.org/api/http.html#http_message_url,
+// I found that the message never provided anything but an empty String as URL.
+//
 function somewhere (res) {
   if (typeof res.url === 'string' && res.url !== '') return res.url
   if (res.req) {
