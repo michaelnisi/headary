@@ -4,20 +4,20 @@
 
 [![Build Status](https://secure.travis-ci.org/michaelnisi/headary.svg)](http://travis-ci.org/michaelnisi/headary)
 
-## example
+## Example
 
 ```js
-var headary = require('headary')
+const headary = require('headary')
 
 // Get HTTP response `res` from somewhere.
 
-var h = headary(res)
+const h = headary(res)
 if (h.ok) {
   // Move on.
 } else {
   if (h.message) {
     // Quaint or unhandled HTTP status.
-    var er = new Error(h.message)
+    const er = new Error(h.message)
     this.emit('error', er)
   } else if (h.url) {
     // Issue request with new URL.
@@ -32,38 +32,38 @@ if (h.ok) {
 }
 ```
 
-## types
+## Types
 
-### summary()
+### Headers
 
-- `message` [`String()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)` | undefined` An error message
-- `ok` [`Boolean()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean)` | false` No further actions required
-- `permanent Boolean() | false` Resource been moved permanently
-- `url String() | undefined` The new location of the resource
+- `message` `String` Optional information.
+- `ok` `Boolean` This flag is `true` if no further actions are required.
+- `permanent` `Boolean` If the resource has been moved permanently, this is `true`.
+- `url` `String` If the resource has been moved, this is its new location.
 
-## exports
+## Exports
 
-**headary** exports a single function that returns a `summary()` object.
+**headary** exports a single function that returns a new `Headers` object.
 
 ### headary(res)
 
-- `res` [`http.IncomingMessage()`](https://nodejs.org/api/http.html#http_http_incomingmessage) A HTTP response
+- `res` [`http.IncomingMessage`](https://nodejs.org/api/http.html#http_class_http_incomingmessage) A HTTP response.
 
-Take a HTTP response, and return a `summary()` object.
+Creates `Headers` from a HTTP response.
 
 The considered HTTP status codes:
 
-- `200 OK`
-- `300 Multiple Choices`
-- `301 Moved Permanently`
-- `302 Found`
-- `303 See Other`
-- `304 Not Modified`
-- `305 Use Proxy`
-- `307 Temporary Redirect`
-- `410 Gone`
+- `200` OK
+- `300` Multiple Choices
+- `301` Moved Permanently
+- `302` Found
+- `303` See Other
+- `304` Not Modified
+- `305` Use Proxy
+- `307` Temporary Redirect
+- `410` Gone
 
-## install
+## Install
 
 With [npm](https://npmjs.org/package/headary) do:
 
@@ -71,6 +71,6 @@ With [npm](https://npmjs.org/package/headary) do:
 $ npm install headary
 ```
 
-## license
+## License
 
 [MIT License](https://raw.github.com/michaelnisi/headary/master/LICENSE)
